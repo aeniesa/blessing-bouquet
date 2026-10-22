@@ -1,0 +1,48 @@
+# .gitignore — Blessing Bouquet
+# Kredensial lokal (jangan di-commit)
+/includes/config.php
+
+
+# Unggahan tidak perlu masuk repositori
+/public/uploads/*
+!/public/uploads/.gitkeep
+!/public/uploads/.htaccess
+!/public/uploads/produk/
+/public/uploads/produk/*
+!/public/uploads/produk/.gitkeep
+!/public/uploads/toko/
+/public/uploads/toko/*
+!/public/uploads/toko/.gitkeep
+
+# Sampah
+Thumbs.db
+.DS_Store
+*.log
+
+
+# File rahasia dan konfigurasi lokal
+.env
+.env.*
+!.env.example
+config.local.php
+secrets/
+
+# Backup database lokal
+/data_backup_sebelum_recovery/
+/mysql/data/
+*.ibd
+*.ibdata
+*.ib_logfile*
+aria_log*
+ibtmp*
+
+# File backup dan sementara
+*.bak
+*.tmp
+
+# Editor
+.idea/
+
+# File database dan installer lokal
+/database/database.sql
+/database/install.php

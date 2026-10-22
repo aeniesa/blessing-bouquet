@@ -1,0 +1,2 @@
+# includes/.htaccess — folder ini harus di luar document root (§22.1 no.11)
+Require all denied

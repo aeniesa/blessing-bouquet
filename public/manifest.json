@@ -1,0 +1,26 @@
+{
+  "name": "Blessing Bouquet",
+  "short_name": "Blessing Bqt",
+  "description": "Katalog dan pemesanan buket Blessing Bouquet melalui WhatsApp.",
+  "start_url": "./index.php",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#FAF7F2",
+  "theme_color": "#D8A7A7",
+  "lang": "id",
+  "icons": [
+    {
+      "src": "assets/img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

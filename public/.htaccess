@@ -1,0 +1,23 @@
+# public/.htaccess — konfigurasi document root publik
+# CATATAN: bila proyek disajikan pada root (vhost dengan DocumentRoot=public/),
+# ubah ErrorDocument menjadi "/404.php". Untuk subfolder XAMPP (mis.
+# http://localhost/blessing-bouquet/) biarkan seperti di bawah.
+
+DirectoryIndex index.php index.html
+
+Options -Indexes
+
+# Halaman 404 kustom (§26.5)
+ErrorDocument 404 /blessing-bouquet/404.php
+
+# Header keamanan (aman dipasang saat lokal, §22.2)
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Blokir akses langsung ke berkas sensitif
+<FilesMatch "\.(sql|md|ini|log|env)$">
+    Require all denied
+</FilesMatch>

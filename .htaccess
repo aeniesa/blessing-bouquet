@@ -1,0 +1,11 @@
+# .htaccess root proyek — perlindungan tambahan bila root pernah menjadi doc root
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^(includes|database|docs)(/|$) - [F,L]
+    RewriteRule (^|/)\.(?!well-known) - [F,L]
+</IfModule>
+
+# Tolak akses berkas sensitif
+<FilesMatch "\.(sql|md|ini|log|env)$">
+    Require all denied
+</FilesMatch>

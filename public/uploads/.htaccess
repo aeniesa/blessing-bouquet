@@ -1,0 +1,11 @@
+# uploads/.htaccess — tolak eksekusi skrip di folder unggahan (§22.1 no.10)
+
+Options -Indexes
+
+<IfModule php_module>
+    php_flag engine off
+</IfModule>
+
+<FilesMatch "\.(php|phtml|phar|php3|php4|php5|php7|phps|cgi|pl|py|asp|aspx|jsp)$">
+    Require all denied
+</FilesMatch>
